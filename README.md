@@ -1,2 +1,2 @@
 # 45DaysToGlory
-A repository for learning and improvement
+A repository for learning and redemption
