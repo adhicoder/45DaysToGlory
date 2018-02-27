@@ -9,8 +9,8 @@ int minDistance(vector<int> v, int C)
     d.push_back(v[i+1]-v[i]);
   }
 
-  int l = std::min_element(vec.begin(), vec.end());
-  int h = std::accumulate(vector.begin(), vector.end(), 0);
+  int l = *std::min_element(d.begin(), d.end());
+  int h = std::accumulate(d.begin(), d.end(), 0);
 
   while (l < h) 
   {
@@ -38,16 +38,16 @@ int minDistance(vector<int> v, int C)
 int main() 
 {
   int t, N, C, input, output;
+  std::vector<int> o;
   cin>>t;
   while(t--)
   {
     cin>>N>>C;
     std::vector<int> v;
-    std::vector<int> o;
     while(N--)
     {
       cin>>input;
-      v.push_back(input)
+      v.push_back(input);
     }
     sort(v.begin(), v.end());
     output = minDistance(v, C);
