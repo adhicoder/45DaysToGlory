@@ -1,17 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+ 
 int minDistance(vector<int> v, int C)
 {
   std::vector<int> d;
-  for (int i = 0; i < v.size(); i++)
+  for (int i = 0; i < v.size()-1; i++)
   {
     d.push_back(v[i+1]-v[i]);
   }
-
+ 
   int l = *std::min_element(d.begin(), d.end());
   int h = std::accumulate(d.begin(), d.end(), 0);
-
+ 
   while (l < h) 
   {
     int allowedNo = 1;
@@ -34,7 +34,7 @@ int minDistance(vector<int> v, int C)
   }
   return l;
 }
-
+ 
 int main() 
 {
   int t, N, C, input, output;
